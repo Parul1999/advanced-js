@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+function callByValue(x, y) 
+{ 
+  x=12;                                            //BY VALUE 
+  y=22; 
+  console.log("x="+x+" "+"y="+y); 
+} 
+let x=111; 
+let y=222; 
+console.log("x="+x+" "+"y="+y);                    //Before call by value
+callByValue(x, y) 
+console.log("x="+x+" "+"y="+y);                   //After call by value
+function callByReference(obj)
+{ 
+  obj.a=11;                                       //BY REFERENCE
+  console.log(obj); 
+} 
+let obj={a:12};
+console.log(obj);                                //Before call by reference
+callByReference(obj);
+console.log(obj);                                //Before call by reference
+</script>
+
+</body>
+</html>

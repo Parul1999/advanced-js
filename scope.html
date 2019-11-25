@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+<button onclick="scope()">Scope</button>
+<script>
+var r = 10;
+function scope(x, y) 
+{ 
+  x = 11;                                            
+  y = 22; 
+  r = 80;
+  console.log("x="+x+" "+"y="+y+" "+"r="+r); 
+} 
+</script>
+
+</body>
+</html>
