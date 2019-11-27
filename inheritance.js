@@ -10,10 +10,14 @@ function Person(first, last, age, gender, interests) {
 
 }
 Person.prototype.bio = function() {
-    alert(this.name.first + '' + this.name.last + 'is' + this.age + 'years old')
+    alert(this.name.first + '' + this.name.last + 'is' + this.age + 'years old');
 };
-Person.prototype.greeting = function() {};
-Person.prototype.farewell = function() {};
+Person.prototype.greeting = function() {
+    alert('hi i am ' + this.name.first + ".");
+};
+Person.prototype.farewell = function() {
+    alert('farewell ' + this.name.first + ' ' + this.name.first);
+};
 let person1 = new Person('Bob', 'Smith', 12, 'male', ['music', 'sking']);
 //Person.prototype
 //Person.__proto__
@@ -29,16 +33,16 @@ Teacher.prototype.constructor = Teacher;
 
 Teacher.prototype.greeting = function() {
     let prefix;
-    if (this.male === '') {
-
-    } else if () {
-
-    } else if () {
-
+    if (this.gender === 'male' || this.gender == 'Male' || this.gender === 'm' || this.gender === 'M') {
+        prefix = "Mr";
+    } else if (this.gender == 'female' || this.gender == 'Female' || this.gender === 'f' || this.gender === 'F') {
+        prefix = "Mrs";
+    } else {
+        prefix = "Mx";
     }
-
+    alert('My name is' + prefix + '' + this.name.last + ', and I teach ' + this.subject + '.');
 };
-let teacher1 = new Teacher('Karen', 'Steph', 12, 'female', ['reading,riding']);
+let teacher1 = new Teacher('Karen', 'Steph', 12, 'female', ['reading,riding'], 'mathematics');
 
 //instance.constructor=const_name
 //instance.__proto==const_name.prototype

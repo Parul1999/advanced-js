@@ -30,12 +30,12 @@ person1.greeting = function() {
         alert('hi i am ' + this.name + ".")
     }
     //directly passing the object literal in object()
-let person1 = new Object({;
-            name = 'Chris';
-            age = 38;
-            person1.greeting = function() {
-                alert('hi i am ' + this.name + ".")
-            }
-            //create method
-            let person2 = Object.create(person1);
-            //person1.name//person1.greeting() in console ..also for person2
+let person1 = new Object(
+    name = 'Chris',
+    age = 38,
+    person1.greeting = function() {
+        alert('hi i am ' + this.name + ".")
+    });
+//create method
+let person2 = Object.create(person1);
+//person1.name//person1.greeting() in console ..also for person2
