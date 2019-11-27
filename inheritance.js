@@ -27,7 +27,17 @@ function Teacher(first, last, age, gender, interests, subject) {
 Teacher.prototype = Object.create(Person.prototype);
 Teacher.prototype.constructor = Teacher;
 
-Teacher.prototype.greeting = function() {};
+Teacher.prototype.greeting = function() {
+    let prefix;
+    if (this.male === '') {
+
+    } else if () {
+
+    } else if () {
+
+    }
+
+};
 let teacher1 = new Teacher('Karen', 'Steph', 12, 'female', ['reading,riding']);
 
 //instance.constructor=const_name
